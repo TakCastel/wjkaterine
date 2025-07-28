@@ -1,5 +1,6 @@
 <template>
   <main>
+    <Navigation />
     <HeroSection />
 
     <AboutMe />
@@ -7,11 +8,14 @@
     <SkillsSection />
 
     <ContactSection />
+    <AppFooter />
   </main>
 </template>
 
 <script setup lang="ts">
 import { onMounted, onBeforeUnmount } from "vue";
+import Navigation from "@/components/Navigation.vue";
+import AppFooter from "@/components/AppFooter.vue";
 
 onMounted(() => {
   if (typeof window === "undefined") return;

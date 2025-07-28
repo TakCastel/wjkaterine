@@ -58,3 +58,210 @@ section[id] {
     opacity: 1;
   }
 }
+
+/* Animations supplémentaires pour les micro-interactions */
+@keyframes pulse-subtle {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+/* Effet de glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Gradient text effect */
+.gradient-text {
+  background: linear-gradient(135deg, #020ae8 0%, #f11680 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Smooth transitions pour tous les éléments */
+* {
+  transition-property:
+    color, background-color, border-color, text-decoration-color, fill, stroke,
+    opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Focus styles pour l'accessibilité */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #020ae8;
+  outline-offset: 2px;
+}
+
+/* Design sharp et angulaire */
+.sharp-border {
+  border-width: 2px;
+  border-style: solid;
+}
+
+.sharp-rotate {
+  transform: rotate(12deg);
+}
+
+.sharp-rotate-small {
+  transform: rotate(6deg);
+}
+
+.sharp-rotate-negative {
+  transform: rotate(-12deg);
+}
+
+.sharp-rotate-negative-small {
+  transform: rotate(-6deg);
+}
+
+.sharp-rotate-minimal {
+  transform: rotate(1deg);
+}
+
+.sharp-rotate-minimal-negative {
+  transform: rotate(-1deg);
+}
+
+/* Hover effects pour les éléments sharp */
+.sharp-hover:hover {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.sharp-hover-reverse:hover {
+  transform: rotate(12deg);
+  transition: transform 0.3s ease;
+}
+
+/* Bordures angulaires */
+.angular-border {
+  border-left-width: 4px;
+  border-left-style: solid;
+  border-left-color: #020ae8;
+}
+
+.angular-border-hover:hover {
+  border-left-width: 8px;
+  transition: border-left-width 0.3s ease;
+}
+
+/* Boutons sharp */
+.sharp-button {
+  border-width: 2px;
+  border-style: solid;
+  transform: rotate(1deg);
+  transition: all 0.3s ease;
+}
+
+.sharp-button:hover {
+  transform: rotate(0deg);
+  border-color: #1f2937;
+}
+
+/* Inputs sharp */
+.sharp-input {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #d1d5db;
+  transition: all 0.3s ease;
+}
+
+.sharp-input:focus {
+  border-color: #020ae8;
+  box-shadow: 0 0 0 2px rgba(2, 10, 232, 0.2);
+}
+
+/* Cards sharp */
+.sharp-card {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.sharp-card:hover {
+  border-color: #020ae8;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Navigation sharp */
+.sharp-nav-link {
+  position: relative;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.sharp-nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #020ae8;
+  transition: width 0.3s ease;
+}
+
+.sharp-nav-link:hover::after {
+  width: 100%;
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #020ae8;
+  border: 2px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1a1a1a;
+}
+
+/* Animations pour le header */
+.slide-down-enter-active,
+.slide-down-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-down-enter-from {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.slide-down-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-down-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-down-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}

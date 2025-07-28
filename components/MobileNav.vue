@@ -1,117 +1,96 @@
 <template>
-  <div>
-    <!-- Bouton burger / X -->
-    <button
-      aria-label="Menu"
-      class="fixed top-5 right-5 z-50"
-      @click="toggleMenu"
+  <nav class="flex flex-col space-y-6">
+    <a
+      href="#home"
+      class="nav-link group"
+      :class="{ active: currentSection === 'home' }"
+      @click="$emit('close')"
     >
-      <Icon
-        :name="isOpen ? 'mdi:close' : 'mdi:menu'"
-        class="text-white w-8 h-8 transition-all duration-200"
-      />
-    </button>
+      <span class="relative">
+        Accueil
+        <span
+          class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"
+        />
+      </span>
+    </a>
 
-    <!-- Menu plein écran -->
-    <transition name="slide">
-      <nav
-        v-if="isOpen"
-        class="fixed inset-0 bg-primary flex flex-col items-center justify-center space-y-8 z-40"
+    <a
+      href="#about"
+      class="nav-link group"
+      :class="{ active: currentSection === 'about' }"
+      @click="$emit('close')"
+    >
+      <span class="relative">
+        À propos
+        <span
+          class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"
+        />
+      </span>
+    </a>
+
+    <a
+      href="#skills"
+      class="nav-link group"
+      :class="{ active: currentSection === 'skills' }"
+      @click="$emit('close')"
+    >
+      <span class="relative">
+        Compétences
+        <span
+          class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"
+        />
+      </span>
+    </a>
+
+    <a
+      href="#contact"
+      class="nav-link group"
+      :class="{ active: currentSection === 'contact' }"
+      @click="$emit('close')"
+    >
+      <span class="relative">
+        Contact
+        <span
+          class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"
+        />
+      </span>
+    </a>
+
+    <!-- Bouton Contact CTA Mobile -->
+    <div class="pt-4 border-t border-gray-200">
+      <a
+        href="#contact"
+        class="block w-full px-6 py-3 bg-primary text-white font-medium rounded-lg text-center hover:bg-primary/90 transition-all duration-300"
+        @click="$emit('close')"
       >
-        <NuxtLink
-          to="/"
-          class="nav-link"
-          :class="{ active: isActive('/') }"
-          @click="closeMenu"
-        >
-          Accueil
-        </NuxtLink>
-
-        <NuxtLink
-          to="/#about"
-          class="nav-link"
-          :class="{ active: isActive('#about') }"
-          @click="closeMenu"
-        >
-          À propos
-        </NuxtLink>
-
-        <NuxtLink
-          to="/#skills"
-          class="nav-link"
-          :class="{ active: isActive('#skills') }"
-          @click="closeMenu"
-        >
-          Compétences
-        </NuxtLink>
-
-        <NuxtLink
-          to="/#contact"
-          class="nav-link"
-          :class="{ active: isActive('#contact') }"
-          @click="closeMenu"
-        >
-          Contact
-        </NuxtLink>
-      </nav>
-    </transition>
-  </div>
+        Me contacter
+      </a>
+    </div>
+  </nav>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { useRoute } from "vue-router";
+import { useActiveSection } from "~/composables/useActiveSection";
 
-const isOpen = ref(false);
-const route = useRoute();
+const { currentSection } = useActiveSection();
 
-const toggleMenu = () => {
-  isOpen.value = !isOpen.value;
-};
-
-const closeMenu = () => {
-  isOpen.value = false;
-};
-
-// Gère / ou /#section
-const isActive = (hash: string) => {
-  if (hash === "/") return route.path === "/" && !route.hash;
-  return route.hash === hash;
-};
+defineEmits(["close"]);
 </script>
 
 <style scoped>
 .nav-link {
-  @apply text-white uppercase text-3xl font-bold transition-colors duration-200;
+  @apply text-gray-700 font-medium text-lg transition-colors duration-200 relative;
 }
 
 .nav-link:hover {
-  @apply text-secondary;
+  @apply text-primary;
 }
 
 .nav-link.active {
-  font-style: italic;
+  @apply text-primary font-semibold;
 }
 
-/* Animation slide */
-.slide-enter-active,
-.slide-leave-active {
-  transition: transform 0.3s ease;
-}
-
-.slide-enter-from {
-  transform: translateX(100%);
-}
-
-.slide-enter-to {
-  transform: translateX(0%);
-}
-
-.slide-leave-from {
-  transform: translateX(0%);
-}
-
-.slide-leave-to {
-  transform: translateX(100%);
+.nav-link.active span::after {
+  @apply w-full;
 }
 </style>
