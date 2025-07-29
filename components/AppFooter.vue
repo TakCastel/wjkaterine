@@ -1,141 +1,94 @@
 <template>
-  <footer class="bg-gray-900 text-white py-16 border-t-2 border-gray-800">
-    <div class="max-w-7xl mx-auto px-6">
-      <!-- Contenu principal -->
-      <div class="grid md:grid-cols-3 gap-8 mb-12">
-        <!-- Logo et présentation -->
-        <div class="space-y-4">
-          <div class="flex items-center space-x-3">
-            <div
-              class="w-10 h-10 bg-white border-2 border-gray-200 flex items-center justify-center transform rotate-12"
-            >
-              <img src="/logo-wjk.png" alt="WJK Logo" class="w-6 h-6" />
-            </div>
-            <div>
-              <h3 class="font-serif font-bold text-white text-lg">
-                Wagner Joye Katerine
-              </h3>
-              <p class="text-gray-400 text-sm">
-                Communication & Gestion Administrative
-              </p>
-            </div>
+  <!-- Footer style Vogue -->
+  <footer class="bg-white-cream border-t border-gray-200 mt-20">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <!-- Section principale du footer -->
+      <div class="py-12 md:py-16">
+        <!-- Navigation du footer -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 mb-12">
+          <div>
+            <h4 class="text-sm font-semibold text-text-dark uppercase tracking-wider mb-4">Compétences</h4>
+            <ul class="space-y-2 text-sm text-text-medium">
+              <li>Communication</li>
+              <li>Gestion Administrative</li>
+              <li>Outils & Technologies</li>
+            </ul>
           </div>
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Spécialisée en stratégie, réseaux sociaux et coordination de projet.
-            Disponible pour accompagner vos projets de communication.
-          </p>
-        </div>
-
-        <!-- Compétences clés -->
-        <div class="space-y-4">
-          <h4 class="font-bold text-white mb-4">Compétences</h4>
-          <div class="space-y-2 text-sm text-gray-400">
-            <div class="flex items-center gap-2">
-              <div
-                class="w-4 h-4 bg-primary flex items-center justify-center transform rotate-12"
-              >
-                <Icon name="lucide:check" class="w-3 h-3 text-white" />
-              </div>
-              <span>Social Media Management</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <div
-                class="w-4 h-4 bg-primary flex items-center justify-center transform rotate-12"
-              >
-                <Icon name="lucide:check" class="w-3 h-3 text-white" />
-              </div>
-              <span>Stratégie Marketing</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <div
-                class="w-4 h-4 bg-primary flex items-center justify-center transform rotate-12"
-              >
-                <Icon name="lucide:check" class="w-3 h-3 text-white" />
-              </div>
-              <span>Gestion de Projet</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <div
-                class="w-4 h-4 bg-primary flex items-center justify-center transform rotate-12"
-              >
-                <Icon name="lucide:check" class="w-3 h-3 text-white" />
-              </div>
-              <span>PAO & Design</span>
-            </div>
+          <div>
+            <h4 class="text-sm font-semibold text-text-dark uppercase tracking-wider mb-4">Formation</h4>
+            <ul class="space-y-2 text-sm text-text-medium">
+              <li>Master Manager</li>
+              <li>Bachelor Marketing</li>
+              <li>IMC Metz</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-text-dark uppercase tracking-wider mb-4">Expériences</h4>
+            <ul class="space-y-2 text-sm text-text-medium">
+              <li>Gestion de Projet</li>
+              <li>Community Management</li>
+              <li>Coordination</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-text-dark uppercase tracking-wider mb-4">Contact</h4>
+            <ul class="space-y-2 text-sm text-text-medium">
+              <li>Disponible</li>
+              <li>Metz, France</li>
+              <li>Projets</li>
+            </ul>
           </div>
         </div>
 
-        <!-- Contact -->
-        <div class="space-y-4">
-          <h4 class="font-bold text-white mb-4">Contact</h4>
-          <div class="space-y-2 text-sm text-gray-400">
-            <div class="flex items-center gap-2">
-              <div
-                class="w-4 h-4 bg-white flex items-center justify-center transform rotate-12"
-              >
-                <Icon name="lucide:mail" class="w-3 h-3 text-gray-900" />
-              </div>
-              <a
-                href="mailto:wagnerjoye.katerine@gmail.com"
-                class="hover:text-white transition-colors duration-200"
-              >
-                wagnerjoye.katerine@gmail.com
-              </a>
+        <!-- Ligne de séparation -->
+        <div class="w-full h-px bg-gray-300 mb-8"></div>
+
+        <!-- Section inférieure -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+          <!-- Informations de contact -->
+          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12">
+            <div class="text-xs text-text-medium uppercase tracking-wider">
+              Wagner Joye Katerine
             </div>
-            <div class="flex items-center gap-2">
-              <div
-                class="w-4 h-4 bg-white flex items-center justify-center transform rotate-12"
-              >
-                <Icon name="lucide:linkedin" class="w-3 h-3 text-gray-900" />
-              </div>
-              <a
-                href="https://www.linkedin.com/in/katerine-wagner-joye/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="hover:text-white transition-colors duration-200"
-              >
+            <div class="text-xs text-text-medium uppercase tracking-wider">
+              Communication & Gestion Administrative
+            </div>
+            <div class="text-xs text-text-medium uppercase tracking-wider">
+              Metz, France
+            </div>
+          </div>
+
+          <!-- Liens sociaux et légaux -->
+          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-8">
+            <div class="flex items-center gap-4">
+              <a href="#" class="text-xs text-text-medium hover:text-purple-light transition-colors duration-200">
                 LinkedIn
               </a>
+              <a href="#" class="text-xs text-text-medium hover:text-purple-light transition-colors duration-200">
+                Email
+              </a>
             </div>
-            <div class="flex items-center gap-2">
-              <div
-                class="w-4 h-4 bg-white flex items-center justify-center transform rotate-12"
-              >
-                <Icon name="lucide:map-pin" class="w-3 h-3 text-gray-900" />
-              </div>
-              <span>Metz, France</span>
+            <div class="text-xs text-text-medium">
+              © 2024 WJKaterine. Tous droits réservés.
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Séparateur -->
-      <div class="border-t-2 border-gray-800 pt-8">
-        <div
-          class="flex flex-col md:flex-row items-center justify-between gap-4"
-        >
-          <!-- Copyright -->
-          <div class="text-sm text-gray-400">
-            © 2024 Wagner Joye Katerine. Tous droits réservés.
+      <!-- Barre de navigation inférieure -->
+      <div class="border-t border-gray-100 py-4">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div class="text-xs text-text-medium uppercase tracking-wider">
+            Portfolio Professionnel
           </div>
-
-          <!-- Liens légaux -->
-          <div class="flex items-center gap-6 text-sm">
-            <a
-              href="#"
-              class="text-gray-400 hover:text-white transition-colors duration-200 border-b-2 border-transparent hover:border-white"
-            >
-              Mentions légales
-            </a>
-            <a
-              href="#"
-              class="text-gray-400 hover:text-white transition-colors duration-200 border-b-2 border-transparent hover:border-white"
-            >
-              Politique de confidentialité
-            </a>
+          <div class="flex items-center gap-6 text-xs text-text-medium uppercase tracking-wider">
+            <a href="#kanban" class="hover:text-purple-light transition-colors duration-200">Compétences</a>
+            <a href="#contact" class="hover:text-purple-light transition-colors duration-200">Contact</a>
+            <span class="text-gray-400">|</span>
+            <span class="text-gray-400">Disponible pour nouveaux projets</span>
           </div>
         </div>
       </div>
     </div>
   </footer>
-</template>
+</template> 

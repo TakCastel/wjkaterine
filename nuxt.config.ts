@@ -28,7 +28,7 @@ export default defineNuxtConfig({
         { name: "author", content: "Wagner Joye Katerine" },
         { name: "robots", content: "index, follow" },
         { name: "language", content: "fr" },
-        { name: "theme-color", content: "#020AE8" },
+        { name: "theme-color", content: "#FFADAD" },
 
         // Open Graph
         {
@@ -72,7 +72,7 @@ export default defineNuxtConfig({
       link: [
         {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&display=swap",
+          href: "https://fonts.googleapis.com/css2?family=Paprika:wght@400&display=swap",
         },
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
         { rel: "canonical", href: "https://wagnerjoyekaterine.com" },
@@ -107,45 +107,15 @@ export default defineNuxtConfig({
                 credentialCategory: "Master",
                 name: "Master Manager de la Stratégie & Performance Commerciale",
                 educationalLevel: "Master",
-                recognizedBy: {
-                  "@type": "EducationalOrganization",
-                  name: "IMC Metz",
-                },
-                validIn: {
-                  "@type": "Country",
-                  name: "France",
-                },
-                dateIssued: "2024",
-              },
-              {
-                "@type": "EducationalOccupationalCredential",
-                credentialCategory: "Bachelor",
-                name: "Bachelor Marketing & Responsable Commercial",
-                educationalLevel: "Bachelor",
-                recognizedBy: {
-                  "@type": "EducationalOrganization",
-                  name: "IMC Metz",
-                },
-                validIn: {
-                  "@type": "Country",
-                  name: "France",
-                },
-                dateIssued: "2022",
               },
             ],
             knowsAbout: [
-              "Social Media Management",
-              "Marketing Strategy",
-              "Commercial Negotiation",
-              "Project Management",
-              "PAO",
-              "Microsoft Office",
-              "Google Workspace",
-              "Canva",
-              "Adobe Express",
-              "CapCut",
-              "Notion",
-              "MailChimp",
+              "Communication",
+              "Gestion Administrative",
+              "Réseaux Sociaux",
+              "Stratégie Marketing",
+              "Coordination de Projet",
+              "Content Creation",
               "Web Content Writing",
               "Content Creation",
             ],

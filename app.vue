@@ -1,12 +1,5 @@
 <template>
-  <div class="min-h-screen bg-bg text-gray-900 font-sans">
-    <PageLoader />
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
+  <div class="bg-white-cream min-h-screen">
+    <NuxtPage />
   </div>
 </template>
-
-<script setup lang="ts">
-import PageLoader from "@/components/PageLoader.vue";
-</script>
