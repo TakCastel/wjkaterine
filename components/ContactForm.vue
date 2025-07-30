@@ -1,5 +1,5 @@
 <template>
-  <div id="contact" class="min-h-screen bg-white-cream p-4 md:p-8">
+  <div id="contact" class="min-h-screen bg-white-cream p-4 md:p-8 pt-16 md:pt-24">
     <div class="max-w-3xl mx-auto">
       <!-- Header du formulaire -->
       <div class="text-center mb-8 md:mb-12">
@@ -7,7 +7,7 @@
           Contactez-moi
         </h2>
         <p class="text-text-medium text-base md:text-lg">
-          Disponible pour vos projets de communication et gestion administrative
+          Je suis disponible pour vos projets de communication et gestion administrative
         </p>
       </div>
 
@@ -16,7 +16,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           <div class="form-group">
             <label for="firstName" class="block text-text-dark font-semibold mb-2 md:mb-3">
-              Prénom *
+              Votre prénom *
             </label>
             <input
               id="firstName"
@@ -30,7 +30,7 @@
 
           <div class="form-group">
             <label for="lastName" class="block text-text-dark font-semibold mb-2 md:mb-3">
-              Nom *
+              Votre nom *
             </label>
             <input
               id="lastName"
@@ -44,9 +44,9 @@
         </div>
 
         <div class="form-group">
-          <label for="email" class="block text-text-dark font-semibold mb-2 md:mb-3">
-            Email *
-          </label>
+                      <label for="email" class="block text-text-dark font-semibold mb-2 md:mb-3">
+              Votre email *
+            </label>
           <input
             id="email"
             v-model="form.email"
@@ -76,9 +76,9 @@
         </div>
 
         <div class="form-group">
-          <label for="message" class="block text-text-dark font-semibold mb-2 md:mb-3">
-            Message *
-          </label>
+                      <label for="message" class="block text-text-dark font-semibold mb-2 md:mb-3">
+              Votre message *
+            </label>
           <textarea
             id="message"
             v-model="form.message"
@@ -95,7 +95,7 @@
             class="w-full md:w-auto px-6 md:px-8 py-3 md:py-4 bg-purple-light text-white rounded-lg font-semibold text-base md:text-lg hover:bg-purple-light/90 transition-colors duration-200 shadow-lg"
             :disabled="isSubmitting"
           >
-            {{ isSubmitting ? 'Envoi en cours...' : 'Envoyer le message' }}
+            {{ isSubmitting ? 'Envoi en cours...' : 'Envoyer votre message' }}
           </button>
         </div>
       </form>
